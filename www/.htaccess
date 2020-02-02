@@ -1,0 +1,17 @@
+RewriteEngine on
+
+# redirect all api calls to /api/index.php
+RewriteRule ^api/user/login$ /routes.php?controller=user&request=login [L,NC]
+RewriteRule ^api/user/logout$ /routes.php?controller=user&request=logout [L,NC]
+RewriteRule ^api/user$ /routes.php?controller=user [L,NC]
+
+RewriteRule ^api/item$ /routes.php?controller=item [L,NC]
+RewriteRule ^api/item/(.*)$ /routes.php?controller=item&request=$1 [L,NC]
+
+# If the request is a file, folder or symlink that exists, serve it up
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# otherwise, serve your index.html app
+RewriteRule ^(.+)$ index.html [L]

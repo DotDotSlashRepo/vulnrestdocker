@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Test API</title>
+        <link rel="stylesheet" href="/assets/css/bulma.min.css">
+        <style type="text/css">
+            ul.nobullet {
+            list-style-type: none;
+            }   
+        </style>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <section class="hero is-medium is-info is-bold">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title">
+                        Vulnerable REST API in Docker - REST Test Client
+                    </h1>
+                    <h2 class="subtitle">
+                        Do not host this on production!!
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                        <h3 class="title is-3 has-text-centered">Request</h3>
+                        <hr>
+                        <div class="content">
+                            <ul class="nobullet">
+                                <li>HTTP Method: <select id='request_method'>
+                                <option value="GET">GET</option>
+                                <option value="POST">POST</option>
+                                <option value="DELETE">DELETE</option>
+                                <option value="PUT">PUT</option>
+                                <option value="TRACE">TRACE</option>
+                                </select></li>
+                                <li>URL: <input type="text" id="url_box"></li>
+                                <li>JSON Body: <textarea id="json_body" rows="4" cols="60" maxlength="500" placeholder="{JSON Here}"></textarea></li>
+                                <li><input type="button" name="test_button" value="submit" onclick="api_test()"></li>
+                                <li><input type="button" name="reset_button" value="reset" onclick="reset()"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h3 class="title is-3 has-text-centered">Response</h3>
+                        <hr>
+                        <div class="content">
+                            <ul class="nobullet">
+                                <li>JSON Body: <div id="json_response"></div></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
