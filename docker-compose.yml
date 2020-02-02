@@ -4,7 +4,7 @@ services:
   webserver:
     build: 
       context: ./bin/webserver
-    container_name: 'app2-webserver'
+    container_name: 'vulnapp-webserver'
     restart: 'always'
     ports:
       - "8082:80"
@@ -18,7 +18,7 @@ services:
       - ${LOG_DIR-./logs/apache2}:/var/log/apache2
   mysql:
     build: ./bin/mysql
-    container_name: 'app2-mysql'
+    container_name: 'vulnapp-mysql'
     restart: 'always'
     ports:
       - "23306:3306"

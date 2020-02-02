@@ -21,6 +21,7 @@ docker-compose up -d
 ```
 
 Vulnerable webservice should be up and running now!! You can access it via `http://localhost:8082`.
+Note: Visit `http://localhost:8082/db_operations/setup_database.php` to initialize the database.
 
 ## Testing the API
 
@@ -37,3 +38,4 @@ For testing the API end points you may use either of below:
 
 * Add JWT support
 * Add SSRF vulnerability
+* Add list of APIs in this documentation. For now please refer the postman collection for endpoints.
