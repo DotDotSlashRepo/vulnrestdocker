@@ -1,39 +1,33 @@
-# LAMP stack built with Docker Compose
+# Vulnerable PHP REST Webservice built with Docker Compose
 
-![Landing Page](https://preview.ibb.co/gOTa0y/LAMP_STACK.png)
+![Landing Page](https://github.com/DotDotSlashRepo/vulnrestdocker/blob/master/images/image.PNG?raw=true)
 
-A basic LAMP stack environment built using Docker Compose. It consists of the following:
+A basic Shopping application in LAMP stack environment built using Docker Compose. Application is configured to have vulnerabilities including:
 
-* PHP
-* Apache
-* MySQL
-* phpMyAdmin
-* Redis
-
-As of now, we have different branches for different PHP versions. Use appropriate branch as per your php version needed:
-* [5.4.x](https://github.com/sprintcube/docker-compose-lamp/tree/5.4.x)
-* [5.6.x](https://github.com/sprintcube/docker-compose-lamp/tree/5.6.x)
-* [7.1.x](https://github.com/sprintcube/docker-compose-lamp/tree/7.1.x)
-* [7.2.x](https://github.com/sprintcube/docker-compose-lamp/tree/7.2.x)
-* [7.3.x](https://github.com/sprintcube/docker-compose-lamp/tree/7.3.x)
-* [7.4.x](https://github.com/sprintcube/docker-compose-lamp/tree/7.4.x)
+* SQL Injection
+* Cross Site Scripting
+* CORS Misconfiguration
 
 ## Installation
 
-Clone this repository on your local computer and checkout the appropriate branch e.g. 7.4.x. 
+Clone this repository on your local computer.
 Run the `docker-compose up -d`.
 
 ```shell
-git clone https://github.com/sprintcube/docker-compose-lamp.git
-cd docker-compose-lamp/
-git fetch --all
-git checkout 7.4.x
+git clone https://github.com/DotDotSlashRepo/vulnrestdocker.git
+cd vulnrestdocker/
 cp sample.env .env
 docker-compose up -d
 ```
 
-Your LAMP stack is now ready!! You can access it via `http://localhost`.
+Vulnerable webservice should be up and running now!! You can access it via `http://localhost:8082`.
 
-## Configuration and Usage
+##Credits
 
-Please read from appropriate version branch.
+* Docker Lamp environment - https://github.com/sprintcube/docker-compose-lamp
+* Original API Code - https://github.com/sambhavsharma/RESTful-API-PHP
+
+## TODO
+
+* Add JWT support
+* Add SSRF vulnerability
