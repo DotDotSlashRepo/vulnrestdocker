@@ -22,6 +22,12 @@ docker-compose up -d
 
 Vulnerable webservice should be up and running now!! You can access it via `http://localhost:8082`.
 
+## Testing the API
+
+For testing the API end points you may use either of below:
+* Postman collection and environment variable in postman folder
+* Using the API test page
+
 ## Credits
 
 * Docker Lamp environment - https://github.com/sprintcube/docker-compose-lamp
