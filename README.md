@@ -22,7 +22,7 @@ docker-compose up -d
 
 Vulnerable webservice should be up and running now!! You can access it via `http://localhost:8082`.
 
-##Credits
+## Credits
 
 * Docker Lamp environment - https://github.com/sprintcube/docker-compose-lamp
 * Original API Code - https://github.com/sambhavsharma/RESTful-API-PHP
